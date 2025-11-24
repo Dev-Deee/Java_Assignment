@@ -22,18 +22,18 @@ public class PositiveNumbers{
         number = input.nextInt();
 
         if(number < 0){
-            negative += number;
+            negativeNumber += number;
         }
         else if(number > 0){
-            positive += number;
+            positiveNumber += number;
         }
         else if(number == 0){
             zero += number;
         }
 
     }
-    System.out.println("Total Positive numbers are: " + positive);
-    System.out.println("Total Negative numbers are: " + negative);
+    System.out.println("Total Positive numbers are: " + positiveNumber);
+    System.out.println("Total Negative numbers are: " + negativeNumber);
     System.out.println("Total zero numbers are: " + zero);
 
 

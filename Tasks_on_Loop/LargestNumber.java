@@ -3,22 +3,25 @@ public class LargestNumber{
     public static void main(String[]args){
     
     Scanner input = new Scanner(System.in);
-
-    int sentinel = -1;
+   int userInput = 0;
+   int sentinel = -1;
+    boolean isRunning = true;
     
-    System.out.print("Enter number or -1 to quit: ");
-    int userInput = input.nextInt();
+   
+  if (userInput != sentinel){
 
-    if (userInput == sentinel){
+    System.out.print("Enter number or -1 to quit: ");
+    userInput = input.nextInt();
+
     System.out.print("No value was entered");
     }
     
     int largestNumber = userInput;
     int smallestNumber = userInput;
 
-    while (userInput != sentinel){
+    while (isRunning){
        System.out.print("Enter number or -1 to quit: ");  
-         userInput++; 
+         
 
     if(userInput > largestNumber){
         largestNumber = userInput;
@@ -26,12 +29,15 @@ public class LargestNumber{
 
      if(userInput < largestNumber){
         smallestNumber= userInput;
-        }    
-           
+       }    
+          userInput +=  1; 
     }
          
-        System.out.print("largest number is "+ largestNumber);
-        System.out.print("largest number is "+ smallestNumber);
+      System.out.print("largest number is "+ largestNumber);
+      System.out.print("largest number is "+ smallestNumber);
 
-    }
+
+   
+    
+ }
 }

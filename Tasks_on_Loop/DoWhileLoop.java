@@ -13,18 +13,20 @@ public class WhileLoopRandom{
 
     do{ 
     sum = firstInput + secondInput;
-    System.out.print("Do you want you want to "); 
+    System.out.print("Do you want you want to continue "); 
     boolean isTrue = True;
     
-        System.out.print("Enter a number: ");
+    System.out.print("Enter a number: ");
     int firstInput = input.nextInt();
     
     System.out.print("Enter a number: ");
     int secondInput = input.nextInt();
+    
+    count += 1;
       
-    }while(isTrue)  
+    }while(isTrue);  
  } 
-   System.out.print(");   
+   System.out.print();   
 }
 
 }

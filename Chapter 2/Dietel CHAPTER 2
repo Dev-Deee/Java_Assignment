@@ -1,0 +1,45 @@
+                CHAPTER 2
+
+2.7
+a. Comments
+b. If
+c. Remainder and division
+d. Left
+e. Variable
+
+2.8
+a. System.out.print(“Enter an Integer: ”);
+b. int b = 10;
+    int c = 5;
+    int a = a * b;
+    int a = 50;
+c. // This program carries out payroll calculations
+
+2.9 
+a. False. The rule of precedence in java says that multiplication, division and remainder operators should be tackled first from left to b. True
+c. False. 
+d. False. 
+e. False. 
+
+2.10
+a. x = 10 and cursor to next line
+b. Value of 5 * 1 is 5, cursor to next line
+c. x is 5 and y is 1
+d. 6 is not equal to 5, cursor to next line
+
+2.11
+a. System.out.println(“m = m + 1”);
+
+
+2.12
+a. Correct
+b. Correct
+c. Not correct
+d. Correct
+e. Not correct
+
+2.13
+a. 13
+b. 14
+
+
