@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class KataTest{
     public static void main(String[]args){
 
-System.out.println(Kata.isSquare(25));
+System.out.println(Kata.divide(11, 5));
 
 }
 }
