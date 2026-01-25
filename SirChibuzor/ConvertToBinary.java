@@ -88,4 +88,4 @@ public class ConvertToBinary {
             cipher += character;
         return cipher;
     }
-g}
+}
