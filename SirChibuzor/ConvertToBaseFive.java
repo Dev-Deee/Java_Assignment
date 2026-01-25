@@ -1,7 +1,7 @@
 public class ConvertToBaseFive {
     public static void main(String[] args){
 
-        int userInput = 10;
+        int userInput = 2304;
         int fromBase = 5;
         int toBase = 32;
 
@@ -75,7 +75,7 @@ public class ConvertToBaseFive {
 
     public static int convertToChar(int number){
 
-        
+        return number;
     }
 }
 
