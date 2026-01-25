@@ -1,21 +1,25 @@
-public class ConvertToBaseFive {
+public class ConvertToBinary {
     public static void main(String[] args){
 
-        int userInput = 2304;
-        int fromBase = 5;
-        int toBase = 32;
+        int userInput = -234;
+        int fromBase = 12;
+        int toBase = 2;
 
         convertBase(userInput, fromBase, toBase);
     }
 
     public static void convertBase(int userInput, int fromBase, int toBase){
+        boolean isNegative = userInput < 0;
+        int absoluteValue = Math.abs(userInput);
+
         if (!baseConditionerStatus(userInput, fromBase)) {
             System.out.println("Invalid Input for the base " + fromBase);
         }
         else{
-            int convertFromBase = convertFromBase(userInput, fromBase);
+            int convertFromBase = convertFromBase(absoluteValue, fromBase);
             String convertToBase = convertToBase(convertFromBase, fromBase, toBase);
-            System.out.printf("%d in base %d is: %s\n" ,userInput , fromBase, convertToBase);
+            String sign = isNegative ? "-" : "";
+            System.out.printf("%s%d in base %d is: %s%s\n" ,sign, absoluteValue, fromBase, sign, convertToBase);
         }
     }
     public static int convertFromBase(int userInput, int fromBase){
@@ -44,8 +48,14 @@ public class ConvertToBaseFive {
         int convertToBinary = userInput;
         while(convertToBinary != 0){
             int remainder = convertToBinary % toBase;
-            baseResult = remainder + baseResult;
+            if(remainder > 9){
+                baseResult = convertToChar(remainder) + baseResult;
+            }
+            else{
+                baseResult = remainder + baseResult;
+            }
             convertToBinary /= toBase; 
+
         }
         return baseResult;
     }
@@ -73,9 +83,11 @@ public class ConvertToBaseFive {
             return true;
     }
 
-    public static int convertToChar(int number){
-
-        return number;
+    public static String convertToChar(int number){
+        String cipher ="";
+            char character = (char) ((number - 10 )+ 'A');
+            cipher += character;
+        return cipher;
     }
 }
 
