@@ -1,19 +1,23 @@
 public class ConvertToBaseFive {
     public static void main(String[] args){
 
-        int userInput = 20;
-        int fromBase = 2;
-        int toBase = 5;
+        int userInput = 10;
+        int fromBase = 5;
+        int toBase = 32;
 
         convertBase(userInput, fromBase, toBase);
     }
 
     public static void convertBase(int userInput, int fromBase, int toBase){
-        int convertFromBase = convertFromBase(userInput, fromBase);
-        String convertToBase = convertToBase(convertFromBase, fromBase, toBase);
-        System.out.printf("%d in base %d is: %s\n" ,userInput , fromBase, convertToBase);
+        if (!baseConditionerStatus(userInput, fromBase)) {
+            System.out.println("Invalid Input for the base " + fromBase);
+        }
+        else{
+            int convertFromBase = convertFromBase(userInput, fromBase);
+            String convertToBase = convertToBase(convertFromBase, fromBase, toBase);
+            System.out.printf("%d in base %d is: %s\n" ,userInput , fromBase, convertToBase);
+        }
     }
-
     public static int convertFromBase(int userInput, int fromBase){
 
         if(userInput ==  0){
@@ -52,6 +56,26 @@ public class ConvertToBaseFive {
             result *= number  ;
         }
         return result;
+    }
+
+    public static boolean baseConditionerStatus(int userInput, int fromBase) {
+        String digit = "" + userInput;
+        int sum = 0;
+        for(int count = 0; count < digit.length(); count++){
+            int remainder = userInput % 10;
+            sum = remainder;
+            userInput /= 10; 
+        }
+        if(sum >= fromBase) {
+            return false;
+        }
+        else 
+            return true;
+    }
+
+    public static int convertToChar(int number){
+
+        
     }
 }
 
