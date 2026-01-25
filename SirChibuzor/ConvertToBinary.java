@@ -1,9 +1,8 @@
 public class ConvertToBinary {
     public static void main(String[] args){
-
-        int userInput = -234;
+        int userInput = -456;
         int fromBase = 12;
-        int toBase = 2;
+        int toBase = 36;
 
         convertBase(userInput, fromBase, toBase);
     }
@@ -89,5 +88,4 @@ public class ConvertToBinary {
             cipher += character;
         return cipher;
     }
-}
-
+g}
