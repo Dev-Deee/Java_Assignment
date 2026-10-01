@@ -1,8 +1,9 @@
 public class ConvertToBinary {
     public static void main(String[] args){
-        int userInput = -456;
-        int fromBase = 12;
-        int toBase = 36;
+        
+        int userInput = 5;
+        int fromBase = 10;
+        int toBase = 2;
 
         convertBase(userInput, fromBase, toBase);
     }
@@ -21,6 +22,7 @@ public class ConvertToBinary {
             System.out.printf("%s%d in base %d is: %s%s\n" ,sign, absoluteValue, fromBase, sign, convertToBase);
         }
     }
+
     public static int convertFromBase(int userInput, int fromBase){
 
         if(userInput ==  0){
@@ -69,13 +71,13 @@ public class ConvertToBinary {
 
     public static boolean baseConditionerStatus(int userInput, int fromBase) {
         String digit = "" + userInput;
-        int sum = 0;
+        int validator = 0;
         for(int count = 0; count < digit.length(); count++){
             int remainder = userInput % 10;
-            sum = remainder;
+            validator = remainder;
             userInput /= 10; 
         }
-        if(sum >= fromBase) {
+        if(validator >= fromBase) {
             return false;
         }
         else 
